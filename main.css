@@ -1,0 +1,198 @@
+/* Start Global Settings */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #c00d34;
+  --main-color-alt: #510011;
+  --secondary-color: #424244;
+  --third-color: #eee;
+  --main-transition: 0.5s;
+}
+
+body {
+  direction: ltr;
+  font-family: "Oswald", sans-serif;
+  padding: 0 !important;
+  margin: 0 !important;
+  background-color: var(--third-color);
+}
+
+a {
+  text-decoration: none !important;
+}
+
+ul {
+  list-style: none !important;
+}
+/* End Global Settings */
+
+/* Start Header Settings */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header .logo {
+  height: 75px;
+  width: unset !important;
+}
+
+@media (max-width: 767px) {
+  .header .logo {
+    height: 55px;
+    margin: auto;
+  }
+}
+
+.header .contact {
+  height: 75px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: flex-end;
+  color: var(--main-color);
+  font-size: 16px;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .contact {
+    font-size: 11px !important;
+  }
+}
+
+@media (max-width: 474px) {
+  .contact {
+    margin: auto;
+    font-size: 9px !important;
+  }
+}
+
+/* End Header Settings */
+
+/* Start Section Settings */
+
+main {
+  border-bottom: 30px solid var(--main-color);
+  min-height: 100vh;
+}
+
+section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+section .countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  gap: 10px;
+}
+
+section .countdown .unit {
+  border: 1px solid var(--secondary-color);
+  border-radius: 6px;
+  text-align: center;
+  width: 100px;
+  transition: var(--main-transition);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+section .countdown .unit span {
+  display: block;
+  transition: var(--main-transition);
+}
+
+section .countdown .unit span:first-child {
+  font-size: 55px;
+  padding: 15px;
+  color: var(--main-color);
+  font-weight: bold;
+}
+
+section .countdown .unit span:last-child {
+  padding: 8px 10px;
+  font-size: 16px;
+  border-top: 1px solid var(--secondary-color);
+}
+
+section .countdown .unit:hover,
+section .countdown .unit:hover span:last-child {
+  border-color: var(--main-color);
+}
+
+section .accounts {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 50px;
+  margin-top: -10px;
+}
+
+section .social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+section .accounts > p,
+section .social > li > a {
+  color: var(--third-color);
+  font-size: 20px;
+}
+
+@media (max-width: 474px) {
+  section .countdown .unit {
+    width: 65px;
+  }
+  section .countdown .unit span:first-child {
+    font-size: 30px;
+  }
+  section .countdown .unit span:last-child {
+    font-size: 11px;
+  }
+
+  section .accounts {
+    margin-top: -15px;
+  }
+  section .accounts > p,
+  section .social > li > a {
+    font-size: 14px !important;
+  }
+}
+section img {
+  max-width: 550px;
+  width: 100%;
+  position: relative;
+  animation: bounce 3s linear infinite;
+  -webkit-animation: bounce 3s linear infinite;
+}
+/* End Section Settings */
+
+/* Start Footer Settings */
+
+/* End Footer Settings */
+
+/* Start Animations */
+@keyframes bounce {
+  0%,
+  100% {
+    top: -15px;
+  }
+  50% {
+    top: 0;
+  }
+}
+/* End Animations */
