@@ -149,7 +149,7 @@ section .social {
 
 section .accounts > p,
 section .social > li > a {
-  color: var(--third-color);
+  color: var(--main-color);
   font-size: 20px;
 }
 

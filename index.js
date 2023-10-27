@@ -8,7 +8,7 @@
     dd = String(today.getDate()).padStart(2, "0"),
     mm = String(today.getMonth() + 1).padStart(2, "0"),
     year = today.getFullYear(),
-    dayMonth = "11/15/",
+    dayMonth = "11/30/",
     publish = dayMonth + year;
 
   today = mm + "/" + dd + "/" + year;
